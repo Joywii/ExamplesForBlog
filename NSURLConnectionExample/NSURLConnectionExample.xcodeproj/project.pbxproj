@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		45914ED418D81C5700C9B9C0 /* WTThreadDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 45914ED318D81C5700C9B9C0 /* WTThreadDownloader.m */; };
 		ADB86C77177F613700E9AEC6 /* PTOperationDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = ADB86C76177F612B00E9AEC6 /* PTOperationDownloader.m */; };
 		F40E9FEB177A8E7900692CB2 /* PTThreadDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = F40E9FE8177A8E5800692CB2 /* PTThreadDownloader.m */; };
 		F40E9FEC177A8E7900692CB2 /* PTNormalDownloaler.m in Sources */ = {isa = PBXBuildFile; fileRef = F40E9FEA177A8E6E00692CB2 /* PTNormalDownloaler.m */; };
@@ -37,6 +38,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		45914ED218D81C5700C9B9C0 /* WTThreadDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTThreadDownloader.h; sourceTree = "<group>"; };
+		45914ED318D81C5700C9B9C0 /* WTThreadDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTThreadDownloader.m; sourceTree = "<group>"; };
 		ADB86C75177F612B00E9AEC6 /* PTOperationDownloader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PTOperationDownloader.h; sourceTree = "<group>"; };
 		ADB86C76177F612B00E9AEC6 /* PTOperationDownloader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PTOperationDownloader.m; sourceTree = "<group>"; };
 		F40E9FE7177A8E5800692CB2 /* PTThreadDownloader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PTThreadDownloader.h; sourceTree = "<group>"; };
@@ -132,6 +135,8 @@
 				F40E9FE8177A8E5800692CB2 /* PTThreadDownloader.m */,
 				ADB86C75177F612B00E9AEC6 /* PTOperationDownloader.h */,
 				ADB86C76177F612B00E9AEC6 /* PTOperationDownloader.m */,
+				45914ED218D81C5700C9B9C0 /* WTThreadDownloader.h */,
+				45914ED318D81C5700C9B9C0 /* WTThreadDownloader.m */,
 				F44D2A5C17798A5C00B48C77 /* Images.xcassets */,
 				F44D2A4B17798A5C00B48C77 /* Supporting Files */,
 			);
@@ -268,6 +273,7 @@
 				ADB86C77177F613700E9AEC6 /* PTOperationDownloader.m in Sources */,
 				F40E9FEB177A8E7900692CB2 /* PTThreadDownloader.m in Sources */,
 				F40E9FEC177A8E7900692CB2 /* PTNormalDownloaler.m in Sources */,
+				45914ED418D81C5700C9B9C0 /* WTThreadDownloader.m in Sources */,
 				F44D2A5517798A5C00B48C77 /* PTAppDelegate.m in Sources */,
 				F44D2A5B17798A5C00B48C77 /* PTViewController.m in Sources */,
 				F44D2A5117798A5C00B48C77 /* main.m in Sources */,
