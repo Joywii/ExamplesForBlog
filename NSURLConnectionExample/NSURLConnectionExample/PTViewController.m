@@ -11,6 +11,7 @@
 #import "PTThreadDownloader.h"
 #import "PTOperationDownloader.h"
 #import "WTThreadDownloader.h"
+#import "WTOperationDownloader.h"
 
 @interface PTViewController ()
 
@@ -82,21 +83,34 @@
 //    [queue addOperation:downloader];NSBlockOperation
     
     //Use WTThreadDownloader
-    WTThreadDownloader *downloader = [WTThreadDownloader downloadWithURL:[NSURL URLWithString:URLString] timeoutInterval:15 success:^(id responseData)
+//    WTThreadDownloader *downloader = [WTThreadDownloader downloadWithURL:[NSURL URLWithString:URLString] timeoutInterval:15 success:^(id responseData)
+//    {
+//        dispatch_async(dispatch_get_main_queue(), ^
+//        {
+//            UIImageView *imageView = (UIImageView *)[self.view viewWithTag:123456];
+//            UIImage *image = [UIImage imageWithData:(NSData *)responseData];
+//            imageView.image = image;
+//        });
+//    }
+//    failure:^(NSError *error)
+//    {
+//        NSLog(@"Failed WTThreadDownloader: %@",error);
+//    }];
+    
+    //Use WTOperationDownloader
+    WTOperationDownloader *downloader = [WTOperationDownloader downloadWithURL:[NSURL URLWithString:URLString] timeoutInterval:15 success:^(id responseData)
     {
-        dispatch_async(dispatch_get_main_queue(), ^
-        {
-            UIImageView *imageView = (UIImageView *)[self.view viewWithTag:123456];
-            UIImage *image = [UIImage imageWithData:(NSData *)responseData];
-            imageView.image = image;
-        });
+        UIImageView *imageView = (UIImageView *)[self.view viewWithTag:123456];
+        UIImage *image = [UIImage imageWithData:(NSData *)responseData];
+        imageView.image = image;
     }
     failure:^(NSError *error)
     {
         NSLog(@"Failed WTThreadDownloader: %@",error);
     }];
-    
+    NSOperationQueue *queue = [[NSOperationQueue alloc] init];
+    [queue addOperation:downloader];
+
     NSLog(@"started downloader: %@", downloader.URL.absoluteString);
 }
-
 @end
